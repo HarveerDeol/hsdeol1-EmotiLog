@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_emotion_log.xml - Layout for individual emotion log items in RecyclerView
+
+    Purpose:
+    Defines the visual appearance of each emotion log entry in the list.
+
+    Design Rationale:
+    - Simple, clean card-based design
+    - Displays emotion prominently with larger text
+    - Shows timestamp in smaller, secondary text
+    - Uses padding and margins for comfortable reading
+    - Includes subtle background and elevation for depth
+
+    Outstanding Issues:
+    - Could add icons or colors based on emotion type
+    - Could add separator lines between items
+-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Emotion Text -->
+        <TextView
+            android:id="@+id/tvEmotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="😊 Happy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <!-- Timestamp Text -->
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jan 15, 2025 14:30:45"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
